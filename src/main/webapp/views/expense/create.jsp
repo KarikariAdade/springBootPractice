@@ -23,5 +23,6 @@
     <button type="submit">Add Expense</button>
 </form:form>
 
+<script src="/js/script.js"></script>
 </body>
 </html>

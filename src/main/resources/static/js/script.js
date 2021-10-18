@@ -1,1 +1,1 @@
-alert('wow')
+// alert('wow')

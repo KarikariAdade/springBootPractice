@@ -5,13 +5,10 @@
 <html lang="en">
 <head>
     <title>Expenses</title>
-    <link href="${pageContext.request.contextPath}/css/style.css">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
 <h1>Expense Tracker</h1>
-<p>${message}</p>
-<h3>${anothermessage}</h3>
-
 
 <!-- foreach tag for jstl -->
 
@@ -21,8 +18,10 @@
     <div>
         <h3>${expense.expensename}</h3>
         <h3>Gh&cent ${expense.amount}</h3>
-        <a href="${contextRoot}/expense/edit/{id}">Edit Expense</a>
+        <a href="${contextRoot}/expense/edit/${expense.id}">Edit Expense</a>
     </div>
 </c:forEach>
+
+<script src="/js/script.js"></script>
 </body>
 </html>
