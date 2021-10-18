@@ -2,7 +2,7 @@ package springPractive.expense;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -34,5 +34,13 @@ public class ExpenseController {
         return mov;
     }
 
+
+    @RequestMapping(method = RequestMethod.POST, value = "expense/create")
+    // Model attribute, as used in the form tag is used to map the form to the service
+    // Its just like one of the requests parameters in laravel
+    public String save(@ModelAttribute("expense") Expense expense){
+        expenseService.save(expense);
+        return "redirect:/";
+    }
 
 }

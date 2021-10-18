@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <title>Expenses</title>
-    <link href="">
+    <link href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <h1>Expense Tracker</h1>
@@ -21,6 +21,7 @@
     <div>
         <h3>${expense.expensename}</h3>
         <h3>Gh&cent ${expense.amount}</h3>
+        <a href="${contextRoot}/expense/edit/{id}">Edit Expense</a>
     </div>
 </c:forEach>
 </body>

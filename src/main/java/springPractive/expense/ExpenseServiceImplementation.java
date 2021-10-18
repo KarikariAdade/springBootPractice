@@ -19,6 +19,7 @@ public class ExpenseServiceImplementation implements ExpenseService{
 
     @Override // Saves the expense
     public void save(Expense expense) {
+        expense.setCreatedAt(System.currentTimeMillis());
         expenseRepository.save(expense);
     }
 }

@@ -12,12 +12,14 @@
 </head>
 <body>
 <h1>Add Expense</h1>
-<form:form action="${contextRoot}/save" method="post" modelAttribute="expense">
+<form:form action="${contextRoot}/expense/create" method="post" modelAttribute="expense">
     <!-- path attribute is for the form name attribute
     usually, the table column name is required
     -->
     <form:input path="expensename" placeholder="Enter expense name" />
+    <form:input path="amount" placeholder="Enter expense amount" />
     <form:textarea path="note" placeholder="Enter Note" />
+    <form:textarea path="description" placeholder="Enter Description" />
     <button type="submit">Add Expense</button>
 </form:form>
 
